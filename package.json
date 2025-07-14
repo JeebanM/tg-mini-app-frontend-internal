@@ -6,7 +6,7 @@
   },
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "CI=false next build",
     "start": "next start",
     "format": "npx prettier --write \"{__tests__,components,pages,styles}/**/*.{ts,tsx,js,jsx}\"",
     "lint": "next lint && npx prettier --check \"{__tests__,components,pages,styles}/**/*.{ts,tsx,js,jsx}\" && npx tsc --noEmit"
@@ -34,8 +34,8 @@
     "@tsconfig/node18": "^18.2.0",
     "@tsconfig/strictest": "^2.0.1",
     "@types/node": "^18.18.0",
-    "@types/react": "^18.2.25",         
-    "@types/react-dom": "^18.2.9",       
+    "@types/react": "^18.2.25",
+    "@types/react-dom": "^18.2.9",
     "autoprefixer": "^10.4.14",
     "dotenv-cli": "^6.0.0",
     "eslint": "^8.23.0",
