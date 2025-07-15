@@ -1,3 +1,5 @@
+// src/theme/Colors.ts
+
 interface ColorShade {
   DEFAULT: string;
   90?: string;
@@ -55,11 +57,16 @@ interface StatusColors {
   };
 }
 
-interface ThemeColors {
+export interface ThemeColors {
   base: BaseColors;
   primary: PrimaryColors;
   secondary: SecondaryColors;
   status: StatusColors;
+
+  // Custom flat values for quick access (used in components like GameCard, CategoryCard)
+  text: string;
+  textSecondary: string;
+  primaryBlack: string;
 }
 
 interface ColorScheme {
@@ -121,6 +128,9 @@ const Colors: ColorScheme = {
         20: "#28A74533",
       },
     },
+    text: "#F0F3F7",              // commonly used for light-on-dark text
+    primaryBlack: "#000000",     // background or dark primary
+    textSecondary: "#B0B3B8",     // muted text
   },
   light: {
     base: {
@@ -175,6 +185,9 @@ const Colors: ColorScheme = {
         20: "#28A74533",
       },
     },
+    text: "#1E2024",             // commonly used for dark-on-light text
+    primaryBlack: "#FFFFFF",     // background or light primary
+    textSecondary: "#6B6B6B",     // muted text
   },
 };
 
